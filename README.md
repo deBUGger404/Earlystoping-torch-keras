@@ -12,6 +12,7 @@
 - [Training](#training)
   - [Pytorch](#pytorch)
   - [Tensorflow-Keras](#tensorflow-keras)
+- [Python-Script](#python-script)
 
 ## Introduction
 - In PyTorch training, I used the `CIFAR-10` dataset which consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
@@ -51,5 +52,14 @@ Below codes, use for early-stopping in PyTorch to overcome the model overfitting
   es = tf.keras.callbacks.EarlyStopping( monitor="val_loss", patience=2, verbose=1, restore_best_weights=True)
   ```
   
+ ## Python-Script
+ ```python
+  # Start training with: 
+  # pytorch
+  python earlystoping_pytorch.py
+
+  #tensorflow-keras
+  python keras_early_stoping.py
+ ```
  # Give a :star: to this Repository!
   
