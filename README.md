@@ -28,30 +28,30 @@
 - If We train our model with too many epochs then it will start overfitting on the training dataset and showing worse performance on the test dataset. And vice versa, too few epochs can lead the model to underfit on trainset.
 - So, Early-stopping is an approach to stop training after some epoch if there is n significant improvement in performance.
 - Basically, Early-stopping monitors the performance during the training using TensorFlow-Keras API.
-### Pytorch:
-Below codes, use for early-stopping in PyTorch to overcome the model overfitting.
-  ```python
-  #use the ./pytorch/utils.py
-  #as you can see the below code which will monitor the performance during the training
-      elif score < self.best_score + self.delta:
-        self.counter += 1
-        self.trace_func(f'EarlyStopping counter: {self.counter} out of {self.patience}')
-        if self.counter >= self.patience:
-            self.early_stop = True
-  # below code save model checkpoint while model will not imporving anymore
-      def save_checkpoint(self, val_loss, model):
-        if self.verbose:
-            self.trace_func(f'Validation loss decreased ({self.val_loss_min:.6f} --> {val_loss:.6f}).  Saving model ...')
-        torch.save(model, self.path)
-        self.val_loss_min = val_loss
-  ```
-  ### Tensorflow-Keras
-  Below code, use for early-stoping for better performance in Keras.
-  ```python
-  import tensorflow as tf
-  es = tf.keras.callbacks.EarlyStopping( monitor="val_loss", patience=2, verbose=1, restore_best_weights=True)
-  ```
-  
+  ### Pytorch:
+  Below codes, use for early-stopping in PyTorch to overcome the model overfitting.
+    ```python
+    #use the ./pytorch/utils.py
+    #as you can see the below code which will monitor the performance during the training
+        elif score < self.best_score + self.delta:
+          self.counter += 1
+          self.trace_func(f'EarlyStopping counter: {self.counter} out of {self.patience}')
+          if self.counter >= self.patience:
+              self.early_stop = True
+    # below code save model checkpoint while model will not imporving anymore
+        def save_checkpoint(self, val_loss, model):
+          if self.verbose:
+              self.trace_func(f'Validation loss decreased ({self.val_loss_min:.6f} --> {val_loss:.6f}).  Saving model ...')
+          torch.save(model, self.path)
+          self.val_loss_min = val_loss
+    ```
+   ### Tensorflow-Keras
+    Below code, use for early-stoping for better performance in Keras.
+    ```python
+    import tensorflow as tf
+    es = tf.keras.callbacks.EarlyStopping( monitor="val_loss", patience=2, verbose=1, restore_best_weights=True)
+    ```
+
  ## Python-Script
  ```python
   # Start training with: 
