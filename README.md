@@ -26,7 +26,7 @@
 
 ## Training
 - If We train our model with too many epochs then it will start overfitting on the training dataset and showing worse performance on the test dataset. And vice versa, too few epochs can lead the model to underfit on trainset.
-- So, Early-stopping is an approach to stop training after some epoch if there is n significant improvement in performance.
+- So, Early-stopping is an approach to stop training after some epoch if there is no significant improvement in performance.
 - Basically, Early-stopping monitors the performance during the training using TensorFlow-Keras API.
   ### Pytorch:
   Below codes, use for early-stopping in PyTorch to overcome the model overfitting.
