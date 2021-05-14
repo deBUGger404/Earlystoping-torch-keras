@@ -1,4 +1,4 @@
-# earlystoping-torch-keras
+# Earlystoping Torch/Tensorflow-Keras
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/59862546/117540979-59b64100-b02f-11eb-9ea9-457ecf2e2271.png" width="400" height="200"> 
